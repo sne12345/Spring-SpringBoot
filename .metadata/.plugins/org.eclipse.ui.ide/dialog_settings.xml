@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/LG/Documents/software-study/helloSpringIdol(lecture5)"/>
+			<item value=""/>
+			<item value="/Users/LG/Documents/software-study/SpringMvcExamples"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/LG/Desktop/helloSpringIdol(hw4-sol).zip"/>
+			<item value="/Users/LG/Desktop/hw5-sol.zip"/>
+			<item value="/Users/LG/Desktop/MemberExample-BeanValidApi.zip"/>
+			<item value="/Users/LG/Desktop/MemberExample (1).zip"/>
+			<item value="/Users/LG/Desktop/SpringMvcExamples (1).zip"/>
+			<item value="/Users/LG/Desktop/helloSpringIdol(lecture5).zip"/>
+			<item value="/Users/LG/Desktop/SpringIdol3(lab3-sol).zip"/>
+			<item value="/Users/LG/Desktop/학교/컴퓨터학과/소프트웨어시스템개발/SpringIdol3(lecture4).zip"/>
+			<item value="/Users/LG/Desktop/학교/컴퓨터학과/소프트웨어시스템개발/SpringIdol2(lecture3).zip"/>
+			<item value="/Users/LG/Desktop/학교/컴퓨터학과/소프트웨어시스템개발/SpringIdol2(hw2-sol).zip"/>
+			<item value="/Users/LG/Desktop/MemberExample.zip"/>
+			<item value="/Users/LG/Desktop/springIdol(lecture2).zip"/>
+			<item value="/Users/LG/Desktop/학교/컴퓨터학과/소프트웨어시스템개발/SpringIdol(hw1-sol).zip"/>
+		</list>
+	</section>
+</section>

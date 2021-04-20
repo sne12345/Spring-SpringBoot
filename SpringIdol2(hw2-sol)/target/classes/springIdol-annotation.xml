@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.example.springidol.annotation" />
+ 
+	<!-- ==================================================================== -->
+	<!-- Spring Idol talent competition class -->
+	<!-- ==================================================================== -->
+<!-- 	
+    <bean id="springIdol" class="com.example.springidol.annotation.SpringIdol">
+		<property name="performers">
+			<list>
+				<ref bean="duke" />
+				<ref bean="kenny" />
+				<ref bean="hank" />
+				<ref bean="chris" />
+				<ref bean="jain" />
+			</list>
+		</property>
+	</bean> -->
+
+	<!-- ==================================================================== -->
+	<!-- Performers -->
+	<!-- ==================================================================== -->
+
+<!-- 
+    <bean id="duke" class="com.example.springidol.annotation.PoeticJuggler">
+		<constructor-arg ref="sonnet29" />
+	</bean>
+
+	<bean id="kenny" class="com.example.springidol.annotation.Instrumentalist">
+		<property name="song" value="Jingle Bells" />
+		<property name="instrument" ref="guitar" />
+	</bean>
+
+	<bean id="hank" class="com.example.springidol.annotation.OneManBand">
+		<property name="instruments" ref="instruments_of_hank" />
+	</bean>
+
+	<bean id="chris" class="com.example.springidol.annotation.Singer">
+        <constructor-arg value="Chris Kim" />
+        <constructor-arg ref="bohemian" />
+	</bean> 
+ -->
+	
+	<bean id="jain" class="com.example.springidol.annotation.Singer">
+		<constructor-arg value="Jain Lee" />
+		<constructor-arg value="#{chris.song}" />
+	</bean> 
+	
+	<!-- ==================================================================== -->
+	<!-- Instruments performers can use -->
+	<!-- ==================================================================== -->
+<!-- 	<bean id="harmonica" class="com.example.springidol.annotation.Harmonica" />
+	<bean id="cymbal" class="com.example.springidol.annotation.Cymbal" />
+	<bean id="guitar" class="com.example.springidol.annotation.Guitar" />
+	<bean id="saxophone" class="com.example.springidol.annotation.Saxophone" />
+	<bean id="piano" class="com.example.springidol.annotation.Piano" />
+	
+	<util:list id="instruments_of_hank">
+		<ref bean="harmonica" />
+		<ref bean="cymbal" />
+		<ref bean="saxophone" />
+	</util:list>
+		
+	<bean id="sonnet29" class="com.example.springidol.annotation.Sonnet29" />
+	
+	<bean id="bohemian" class="com.example.springidol.annotation.Song"
+		p:title="Bohemian Rhapsody" p:artist="Queen" />
+-->
+ 	<bean id="hero" class="com.example.springidol.annotation.Song"
+		p:title="Hero" p:artist="Mariah Carey" />           	
+
+<!-- 
+    <bean id="encore" class="com.example.springidol.annotation.Encore">
+      <property name="performer"
+             value="#{springIdol.performers[T(java.lang.Math).random()*springIdol.performers.length]}" />
+    </bean> 
+-->
+ 
+</beans>

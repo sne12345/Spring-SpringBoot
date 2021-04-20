@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.example.springidol.annotation" />
+
+	<!-- ==================================================================== -->
+	<!-- Performers -->
+	<!-- ==================================================================== -->
+	
+	<bean id="jain" class="com.example.springidol.annotation.Singer">
+		<constructor-arg value="Jain Lee" />
+		<constructor-arg value="#{chris.song}" />
+	</bean>
+	
+	<!-- ==================================================================== -->
+	<!-- Instruments performers can use -->
+	<!-- ==================================================================== -->
+	
+	
+	
+	<!-- 실습 #1의  Singer, Song, Encore bean -->
+	<!-- <bean id="bohemian" class="com.example.springidol.annotation.Song"
+		p:title="Bohemian Rhapsody" p:artist="Queen" />
+ 		 -->
+ 	<bean id="hero" class="com.example.springidol.annotation.Song"
+		p:title="Hero" p:artist="Mariah Carey" />           	
+
+
+</beans>

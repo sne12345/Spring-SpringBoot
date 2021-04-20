@@ -1,0 +1,12 @@
+package com.example.helloworld.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.example.springidol.Performer;
+
+public class HelloService {
+
+	Map <String, Performer> map = new HashMap();
+	
+}

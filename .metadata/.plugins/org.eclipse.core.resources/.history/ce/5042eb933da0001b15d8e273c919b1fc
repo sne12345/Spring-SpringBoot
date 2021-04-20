@@ -1,0 +1,6 @@
+package com.example.helloworld.service;
+
+public class HelloService {
+
+	Map <String, Performer> map = new HashMap();
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- ==================================================================== -->
+	<!-- Spring Idol talent compitition class -->
+	<!-- ==================================================================== -->
+	<bean id="springIdol" class="com.example.springidol.SpringIdol">
+		<property name="performers">
+			<list>
+				<ref bean="duke" />
+				<ref bean="kenny" />
+				<ref bean="hank" />
+				<ref bean="chris" />
+				<ref bean="jason" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- ==================================================================== -->
+	<!-- Performers -->
+	<!-- ==================================================================== -->
+
+	<bean id="duke" class="com.example.springidol.PoeticJuggler"
+		c:poem-ref="sonnet29">
+	</bean>
+
+	<bean id="kenny" class="com.example.springidol.Instrumentalist"
+		p:song="Jingle Bells"
+		p:instrument-ref="guitar">
+	</bean>
+
+	<bean id="hank" class="com.example.springidol.OneManBand">
+		<property name="instruments">
+			<map>
+				<entry>
+					<key><value>HARMONICA</value></key>
+					<ref bean="harmonica"/>
+				</entry>
+				<entry key="GUITAR" value-ref="guitar"/>
+				<entry key="SAXOPHONE" value-ref="saxophone"/>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="chris" class="com.example.springidol.Singer"
+		c:name="Chris"
+		c:song-ref="stay">
+	</bean>
+	
+	<bean id="jason" class="com.example.springidol.Singer"
+		c:name="Jason"
+		c:song="#{chris.song}">
+	</bean> 
+	
+	<bean id="encore" class="com.example.springidol.Encore"
+		p:encorePerformer="#{springIdol.performers[T(java.lang.Math).random()*springIdol.performers.length]}">
+	</bean>
+	
+	
+	
+	
+	
+	<bean id="sonnet29" class="com.example.springidol.Sonnet29" />
+	
+	<bean id="chrismas" class="com.example.springidol.Song"
+		p:title="All I want for chrismas"
+		p:composer="Mariah Carey">
+	</bean>
+	
+	<bean id="stay" class="com.example.springidol.Song"
+		p:title="Stay"
+		p:composer="Black Pink">
+	</bean>
+	
+	
+	
+	<!-- ==================================================================== -->
+	<!-- Instruments performers can use -->
+	<!-- ==================================================================== -->
+	<bean id="harmonica" class="com.example.springidol.Harmonica" />
+	<bean id="cymbal" class="com.example.springidol.Cymbal" />
+	<bean id="guitar" class="com.example.springidol.Guitar" />
+	<bean id="saxophone" class="com.example.springidol.Saxophone" />
+
+</beans>

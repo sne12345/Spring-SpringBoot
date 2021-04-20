@@ -1,0 +1,32 @@
+package com.example.springidol.annotation;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Value;
+
+import com.example.springidol.PerformanceException;
+import com.example.springidol.Performer;
+
+public class Singer implements Performer {
+	@Value("chris")
+	private String name;
+	@Resource(name="bohemian")
+	private Song song;
+
+	public Singer() {
+	}
+
+	public Singer(String name, Song song) {
+		this.name = name;
+		this.song = song;
+	}
+
+	public Song getSong() {
+		return song;
+	}
+
+	@Override
+	public void perform() throws PerformanceException {
+		System.out.println(name + " is singing a song \"" + song.getTitle() + "\" by " + song.getArtist());
+	}
+}

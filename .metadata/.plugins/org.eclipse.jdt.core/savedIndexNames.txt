@@ -1,0 +1,24 @@
+INDEX VERSION 1.131+/Users/LG/Documents/software-study/.metadata/.plugins/org.eclipse.jdt.core
+2358733864.index
+3065931485.index
+4277687087.index
+4163096081.index
+2637077622.index
+2349248622.index
+1385876264.index
+1709207244.index
+49472711.index
+432574254.index
+3848494560.index
+1252426512.index
+2157394277.index
+333567345.index
+40931970.index
+3176334882.index
+1650725385.index
+1861510265.index
+2331344685.index
+2832345482.index
+3208683872.index
+3653879734.index
+541416559.index
